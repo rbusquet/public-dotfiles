@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 set -e
 
 cp -r . $HOME
@@ -17,11 +17,11 @@ if [[ ! -a $HOME/.fzf ]]; then
 fi
 
 if [[ ! -a $HOME/.go ]]; then
-    curl -L https://git.io/vQhTU | GOROOT=$HOME/.go bash
+    curl -L https://git.io/vQhTU | GOROOT=$HOME/.go zsh
 fi
 
 if [[ ! -a $HOME/.nvm ]]; then
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | NVM_DIR=$HOME/.nvm bash
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | NVM_DIR=$HOME/.nvm zsh
 fi
 
 if [[ ! -a $GOPATH/bin/powerline-go ]]; then

@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 set -e
 
-pip install powerline-shell
-
 if [[ ! -a $HOME/.oh-my-zsh ]]; then  
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
@@ -19,3 +17,9 @@ fi
 if [[ ! -a $HOME/.nvm ]]; then  
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 fi
+
+if [[ ! -a $GOPATH/bin/powerline-go ]]; then  
+    go install github.com/justjanne/powerline-go@latest
+fi
+
+cp -r . $HOME

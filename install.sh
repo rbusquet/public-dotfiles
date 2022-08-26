@@ -12,3 +12,10 @@ if [[ ! -a $HOME/.fzf ]]; then
     $HOME/.fzf/install --all
 fi
 
+if [[ ! -a $HOME/.go ]]; then  
+    curl -L https://git.io/vQhTU | bash
+fi
+
+if [[ ! -a $HOME/.nvm ]]; then  
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+fi

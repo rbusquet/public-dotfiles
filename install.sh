@@ -15,7 +15,7 @@ if [[ ! -a $HOME/.go ]]; then
 fi
 
 if [[ ! -a $HOME/.nvm ]]; then  
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | zsh
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | NVM_DIR=$HOME/.nvm zsh
 fi
 
 if [[ ! -a $GOPATH/bin/powerline-go ]]; then  

@@ -113,7 +113,7 @@ export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
 
 function powerline_precmd() {
-    PS1="$($GOPATH/bin/powerline-go -error $? -jobs ${${(%):%j}:-0})"
+    eval $($GOPATH/bin/powerline-go -eval -hostname-only-if-ssh -modules venv,user,host,ssh,cwd,perms,git,hg,exit,root -modules-right kube,node -error $? -jobs ${${(%):%j}:-0})
 
     # Uncomment the following line to automatically clear errors after showing
     # them once. This not only clears the error for powerline-go, but also for

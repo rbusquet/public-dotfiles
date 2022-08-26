@@ -109,7 +109,7 @@ export NVM_DIR="$HOME/.nvm"
 # GoLang
 export GOROOT=$HOME/.go
 export PATH=$GOROOT/bin:$PATH
-export GOPATH=$GOPATH/go
+export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
 
 function powerline_precmd() {

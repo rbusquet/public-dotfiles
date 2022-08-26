@@ -11,11 +11,11 @@ if [[ ! -a $HOME/.fzf ]]; then
 fi
 
 if [[ ! -a $HOME/.go ]]; then  
-    curl -L https://git.io/vQhTU | bash
+    curl -L https://git.io/vQhTU | zsh
 fi
 
 if [[ ! -a $HOME/.nvm ]]; then  
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | zsh
 fi
 
 if [[ ! -a $GOPATH/bin/powerline-go ]]; then  
@@ -23,3 +23,4 @@ if [[ ! -a $GOPATH/bin/powerline-go ]]; then
 fi
 
 cp -r . $HOME
+rm -rf $HOME/.git

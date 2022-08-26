@@ -1,4 +1,5 @@
 export ZSH=$HOME/.oh-my-zsh
+export FZF_BASE=$HOME/.fzf
 
 # oh-my-zsh
 plugins=(git fzf python docker docker-compose gh)

@@ -17,7 +17,7 @@ if [[ ! -a $HOME/.fzf ]]; then
 fi
 
 if [[ ! -a $HOME/.go ]]; then
-    curl -L https://git.io/vQhTU | GOROOT=$HOME/.go zsh
+    curl -L https://git.io/vQhTU | GOROOT=$HOME/.go sh
 fi
 
 if [[ ! -a $HOME/.nvm ]]; then

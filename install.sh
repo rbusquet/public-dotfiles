@@ -22,5 +22,9 @@ if [[ ! -a $HOME/.nvm ]]; then
 fi
 
 if [[ ! -a $GOPATH/bin/powerline-go ]]; then
+    export GOROOT=$HOME/.go
+    export PATH=$GOROOT/bin:$PATH
+    export GOPATH=$HOME/go
+    export PATH=$GOPATH/bin:$PATH
     go install github.com/justjanne/powerline-go@latest
 fi

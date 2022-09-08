@@ -28,3 +28,10 @@ if [[ ! -a $GOPATH/bin/powerline-go ]]; then
     export PATH=$GOPATH/bin:$PATH
     go install github.com/justjanne/powerline-go@latest
 fi
+
+# git config
+git config --global user.name "Ricardo Busquet"
+git config --global user.email 7198302+rbusquet@users.noreply.github.com
+git config --global pull.rebase true
+git config --global alias.fprune "fetch origin --prune"
+git config --global alias.undo "reset HEAD~"

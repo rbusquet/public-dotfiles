@@ -13,20 +13,8 @@ if [[ ! -a $HOME/.fzf ]]; then
     $HOME/.fzf/install --all
 fi
 
-if [[ ! -a $HOME/.go ]]; then
-    curl -L https://git.io/vQhTU | GOROOT=$HOME/.go bash
-fi
-
 if [[ ! -a $HOME/.nvm ]]; then
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | NVM_DIR=$HOME/.nvm bash
-fi
-
-if [[ ! -a $GOPATH/bin/powerline-go ]]; then
-    export GOROOT=$HOME/.go
-    export PATH=$GOROOT/bin:$PATH
-    export GOPATH=$HOME/go
-    export PATH=$GOPATH/bin:$PATH
-    go install github.com/justjanne/powerline-go@latest
 fi
 
 # git config

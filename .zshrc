@@ -1,5 +1,6 @@
 export ZSH=$HOME/.oh-my-zsh
 export FZF_BASE=$HOME/.fzf
+ZSH_THEME=minimal
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -105,33 +106,3 @@ export PATH="$HOME/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# GoLang
-export GOROOT=$HOME/.go
-export PATH=$GOROOT/bin:$PATH
-export GOPATH=$HOME/go
-export PATH=$GOPATH/bin:$PATH
-
-function powerline_precmd() {
-    eval $($GOPATH/bin/powerline-go -theme gruvbox -eval -hostname-only-if-ssh -modules venv,user,host,ssh,cwd,perms,git,hg,exit,root -modules-right kube,node -error $? -jobs ${${(%):%j}:-0})
-
-    # Uncomment the following line to automatically clear errors after showing
-    # them once. This not only clears the error for powerline-go, but also for
-    # everything else you run in that shell. Don't enable this if you're not
-    # sure this is what you want.
-
-    #set "?"
-}
-
-function install_powerline_precmd() {
-  for s in "${precmd_functions[@]}"; do
-    if [ "$s" = "powerline_precmd" ]; then
-      return
-    fi
-  done
-  precmd_functions+=(powerline_precmd)
-}
-
-if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
-    install_powerline_precmd
-fi
